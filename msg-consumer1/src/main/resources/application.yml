@@ -1,0 +1,23 @@
+server:
+  port: 9002
+  servlet:
+    context-path: /
+spring:
+  redis:
+    database: 0
+    host: 101.43.136.107
+    port: 49214
+    password: '772147'
+    timeout: 20000
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+redisstream:
+  keep-msg-num: 10000
+  stream: 'msg-queue:mail-send'
+  group: 'mail-send-group'
+  consumer-timeout: 5
+  consumer-batch-size: 10
